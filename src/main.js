@@ -3,8 +3,16 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import VueCircleSlider from 'vue-circle-slider'
+Vue.use(VueCircleSlider)
 
 Vue.config.productionTip = false
+
+Vue.directive('hljs', {
+  inserted: function (el) {
+    window.hljs.highlightBlock(el)
+  }
+})
 
 /* eslint-disable no-new */
 new Vue({
