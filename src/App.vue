@@ -1,6 +1,7 @@
 <template>
   <div id="app">
   <h1>{{message}}</h1>
+  <p>My first App!</p>
 <router-view/>
   </div>
 </template>
