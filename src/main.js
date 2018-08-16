@@ -3,7 +3,9 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+
 import VueCircleSlider from 'vue-circle-slider'
+
 Vue.use(VueCircleSlider)
 
 Vue.config.productionTip = false

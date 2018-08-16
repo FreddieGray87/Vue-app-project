@@ -1,25 +1,46 @@
 <template>
   <div id="app">
   <h1>{{message}}</h1>
+<a v-on:click="handleClick">Clickme!</a>
   <p>My first App!</p>
   <circle-slider v-model="val1"></circle-slider>
   <div>{{ val1 }}</div>
 <router-view/>
-  </div>
+<dropdown :options="arrayOfObjects" :selected="selectedObject" v-on:updateOption="updateSelected"></dropdown>
+</div>
 </template>
 
 <script>
 
 import Hello from './components/HelloWorld'
+import dropdown from 'vue-dropdowns';
 
 export default {
-  name: 'App',
-  data(){
-    return{
-      message : "Climbing Grade Converter!"
+  name: 'app',
+  data () {
+    return {
+      message: "Climbing Grade Converter!",
+      arrayOfObjects: [
+        {id: 1, name: 'First Option'},
+        {id: 2, name: 'Second Option'},
+        {id: 3, name: 'Third Option'},
+      ],
+      selectedObject: {},
     }
-  }
+  },
+  components: {
+    'dropdown': dropdown,
+  },
+  methods: {
+    updateSelected(payload) {
+      this.selectedObject = payload;
+    }
+  },
+ methods:{
+   handleClick:function(){
+     alert('test')
 }
+}}
 </script>
 
 <style>
