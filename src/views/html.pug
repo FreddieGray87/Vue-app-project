@@ -1,0 +1,31 @@
+doctype html  
+html(lang='en')  
+ head
+   title Pug
+#app.container.mt-3.mt-sm-5
+  .row.justify-content-center.mb-4
+    .col-md-4
+      .input-group
+        .input-group-addon $
+        input.form-control(type="number", v-model="input")
+        
+  .row.justify-content-center(v-if="input")
+    .col-md-6
+      table.table
+        thead
+          tr
+            th
+            th 15%
+            th 18%
+            th 20%
+        tbody
+          tr
+            th Tip
+            td ${{ fifteen }}
+            td ${{ eighteen }}
+            td ${{ twenty }}
+          tr
+            th Total
+            td ${{ tFifteen }}
+            td ${{ tEighteen }}
+            td ${{ tTwenty }}

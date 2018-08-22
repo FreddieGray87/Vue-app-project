@@ -11,41 +11,41 @@
 </template>
 
 <script>
-
-import Hello from './components/HelloWorld'
-import dropdown from 'vue-dropdowns';
-
+import hello from "./views/HelloWorld";
+// import dropdown from "vue-dropdowns";
+import Cal from "./views/tipCal";
 export default {
-  name: 'app',
-  data () {
+  name: "app",
+  data() {
     return {
       message: "Climbing Grade Converter!",
-      arrayOfObjects: [
-        {id: 1, name: 'First Option'},
-        {id: 2, name: 'Second Option'},
-        {id: 3, name: 'Third Option'},
-      ],
-      selectedObject: {},
-    }
-  },
-  components: {
-    'dropdown': dropdown,
-  },
-  methods: {
-    updateSelected(payload) {
-      this.selectedObject = payload;
-    }
-  },
- methods:{
-   handleClick:function(){
-     alert('test')
-}
-}}
+  //     arrayOfObjects: [
+  //       { id: 1, name: "First Option" },
+  //       { id: 2, name: "Second Option" },
+  //       { id: 3, name: "Third Option" }
+  //     ],
+  //     selectedObject: {}
+  //   };
+  // },
+  // components: {
+  //   dropdown: dropdown
+  // },
+  // methods: {
+  //   updateSelected(payload) {
+  //     this.selectedObject = payload;
+  //   }
+  // },
+  // methods: {
+  //   handleClick: function() {
+  //     alert("test");
+  //   }
+  // }
+}}};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
